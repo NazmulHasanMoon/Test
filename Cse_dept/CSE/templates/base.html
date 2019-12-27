@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1 align="center"> CSE Department Student-Teacher Info </h1>
+    <hr>
+    <ul>
+        <li><a href="{% url 'home' %}"> HOME </a> | </li>
+        <li><a href="{% url 'post-list' %}"> POST </a> | </li>
+        <li><a href="{% url 'about-me' %}"> ABOUT ME </a> </li>
+
+        <li style="float:right"> <a href="#" > REGISTER </a></li>
+        <li style="float:right"> <a href="#"> LOGIN </a>|</li>
+    </ul>
+    <hr>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
