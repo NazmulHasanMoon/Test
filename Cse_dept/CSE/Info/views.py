@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'home.html')
 
 
-def student_info(request):
+def student_list(request):
     students = Student.objects.all()
     return render(request,'student_list.html', {'all_student_list': students})
 
