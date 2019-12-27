@@ -15,8 +15,14 @@
         <li><a href="{% url 'post-list' %}"> POST </a> | </li>
         <li><a href="{% url 'about-me' %}"> ABOUT ME </a> </li>
 
-        <li style="float:right"> <a href="#" > REGISTER </a></li>
-        <li style="float:right"> <a href="#"> LOGIN </a>|</li>
+        {% if user.is_authenticated %}
+        <li style="float:right"> <a href="{% url 'logout' %}" > LOGOUT </a></li>
+        <li style="float:right"> <a href="{% url 'logged-user' %}" > {{user.username}} </a>|</li>
+        {% else %}
+        <li style="float:right"> <a href="{% url 'register' %}" > REGISTER </a></li>
+        <li style="float:right"> <a href="{% url 'login' %}"> LOGIN </a>|</li>
+        {% endif %}
+
     </ul>
     <hr>
 
