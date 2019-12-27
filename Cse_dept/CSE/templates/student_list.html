@@ -3,8 +3,8 @@
 {% block content %}
       <h1 align="center"> --- Student List --- </h1>
       <ul>
-          {% for post in all_student_list %}
-            <h3> <a href="{% url 'single-student' Student.pk %}">{{ Student.Reg }}</a></h3>
+          {% for student in all_student_list %}
+            <h3> <a href="{% url 'single-student' student.pk %}"> {{ student.Reg }}</a></h3>
           {% endfor %}
       </ul>
 
