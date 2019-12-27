@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <h1 align="center"> --- Tecaher List --- </h1>
+      <ul>
+          {% for teacher in all_teacher_list %}
+            <h3> <a href="{% url 'single-teacher' teacher.pk %}"> {{ teacher.Name }}</a></h3>
+          {% endfor %}
+      </ul>
+
+{% endblock %}
