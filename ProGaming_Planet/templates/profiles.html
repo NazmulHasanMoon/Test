@@ -17,7 +17,7 @@
     .card {
         box-shadow: 0 0px 0px #E3E7EB;
         height : 375px;
-        width : 1300px;
+        width : 1000px;
     }
 </style>
 
@@ -41,7 +41,6 @@
       <th scope="col">Email</th>
       <th scope="col">Institute</th>
       <th scope="col">Country</th>
-      <th scope="col">Join Date</th>
     </tr>
   </thead>
     {% for user in all_user %}
@@ -53,7 +52,6 @@
       <td>{{user.email}}</td>
       <td>{{user.institute}}</td>
       <td>{{user.country}}</td>
-      <td>{{user.date_joined}}</td>
     </tr>
   </tbody>
     {% endfor %}
